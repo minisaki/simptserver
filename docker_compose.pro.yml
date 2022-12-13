@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - postgres_simpt:/var/lib/postgresql/data
+    env_file:
+      - ./.env.prod.db
+  web:
+    build: .
+    command: gunicorn simpt.wsgi -b 0.0.0.0:8000 --timeout 120
+    expose:
+      - 8000    
+    volumes:
+      - .:/code
+      - static_volume:/code/staticfiles
+      - media_volume:/code/mediafiles
+    env_file:
+      - ./.env.prod
+    depends_on:
+      - db
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./dh-param/dhparam-2048.pem:/etc/ssl/certs/dhparam-2048.pem
+      - /docker-volumes/etc/letsencrypt/live/simsore.com/fullchain.pem:/etc/letsencrypt/live/simsore.com/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/simsore.com/privkey.pem:/etc/letsencrypt/live/simsore.com/privkey.pem
+      - /docker-volumes/data/letsencrypt:/data/letsencrypt
+      - static_volume:/code/staticfiles
+      - media_volume:/code/mediafiles
+    depends_on:
+      - web
+
+volumes:
+  postgres_simpt:
+  static_volume:
+  media_volume:

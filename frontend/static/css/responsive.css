@@ -1,0 +1,419 @@
+/* mobile: with < 46.1875em (740px)  */
+/* tablet: with >= 740px and with < 1024px*/
+/* pc with >= 1024px */
+/* 1 rem = 16px */
+
+/* tablet and mobile < 1024px*/
+@media screen and (max-width:63.9375em) {
+  :root {
+    --height-header-tablet: 46px;
+  }
+  .hiden-on-mobile-tablet {
+    display: none;
+  }
+  /* .navigation__menu-mobile {
+    width: 100%;
+  } */
+  .nabar {
+    height: var(--height-header-tablet);
+  }
+  .icon-check {
+    font-size: 1.2rem;
+  }
+  .navigation__menu-mobile{
+    position: fixed;
+    top: 0;
+    width: 644px;
+    height: 46px;
+    background-color: var(--primary-color);
+    display: flex;
+    z-index: 10;
+  }
+  .container {
+    margin-top: calc(var(--height-header-tablet));
+  }  
+  .content__list{
+    min-height: 300px;
+  }
+  .container__mid-heading.hiden {
+    display: none;
+  }
+  .modal-menu {
+    display: flex;
+    overflow-x: hidden;
+  }
+  .wrap-filter-item > span, .wrap-filter-item > i {
+    font-size: 1.2rem;
+  }
+  .help_title .text {
+    font-size: 1.6rem;
+    padding: 0 5px;
+  }
+  .help_content {
+    padding: 0 10px;
+  }
+  .footer_img {
+    margin-bottom: 60px;
+  }
+}
+
+/* mobile < 740px*/
+@media screen and (max-width: 46.1875em) {
+  .hiden-on-mobile {
+    display: none;
+  }
+  .navigation__menu-mobile {
+    /* left: 0; */
+    /* right: 0; */
+    width: 100%;
+  }
+  .container {
+    margin-top: var(--height-header-tablet);
+  }
+  .navigation__home, .navigation__menu {
+    width: 20%;
+  }
+  .search {
+    position: relative;
+  }
+  .btn.btn-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    border-top-right-radius: 3px;
+    height: 38px;
+    width: 50px;
+    border-bottom-right-radius: 3px;
+    background-color: var(--green-color);
+    margin-right: 1px;
+  }
+  .btn-search > span {
+    display: none;
+  }
+  .btn-search > i {
+    color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: 50%;
+  }
+  .search-input {
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .search-input.error::-webkit-input-placeholder {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+  .modal-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+  }
+  .modal-menu.active {
+    transform: translateX(0);
+  }
+  .content__filter-item > span {
+    font-size: 1.2rem;
+  }
+  .content__item {
+    font-size: 1.2rem;
+  }
+  .item-2.item-2--color {
+    font-size: 1.6rem;
+  }
+  .item-4.item-4--viettel, 
+  .item-3.item-3--color, 
+  .item-4.item-4--vinaphone, 
+  .item-4.item-4--mobifone, 
+  .item-4.item-4--itel, 
+  .item-4.item-4--gmobile,
+  .item-4.item-4--vietnammobile {
+    font-size: 1rem;
+  }
+  .content__item span {
+    font-size: 1.3rem;
+  }
+  .content__item span.discount {
+    font-size: 1rem;
+  }
+  .cart_infor {
+    padding: 0 10px;
+  }
+  .item-1 {
+    width: 8%;
+  }
+  .item-2 {
+    flex: 1;
+  }
+  .item-3, .item-4, .item-5{
+    width: 25%;
+  }
+  .item-4 {
+    width: 15%
+  }
+  .item-5{
+    width: 20%;
+  }
+  .btn.btn-medium {
+    width: 60px;
+    font-size: 1.2rem;
+  }
+  .modal__inner-header-item {
+    font-size: 1.2rem;
+  }
+  .modal__inner-body-item-detail {
+    font-size: 1rem;
+  }
+  .mg-l-mobile-10 {
+    margin-left: 10px;
+  }
+  .search__item {
+    font-size: 1rem;
+  }
+  .footer-item {
+    font-size: 1.2rem;
+  }
+  .footer__guest {
+    font-size: 1.4rem;
+  }
+  .footer__guest-item {
+    font-size: 1.2rem;
+  }
+  .search__list {
+    margin: 5px 0;
+  }
+  .search__item {
+    padding: 0px;
+  }
+  .navigation__brand > .search.show {
+    display: block;
+  }
+  .line {
+    width: 80%;
+  }
+  .navigation__brand > img {
+    width: 100%;
+    height: unset;
+  }
+  .control-filter::after, .control-filter::before {
+    display: none;
+  }
+  .content__filter.fixed {
+    position: fixed;
+    top: var(--height-header-tablet);
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+  }
+  .container__mid-content.mg-top-20 {
+    margin-top: 120px;
+    margin-top: 0;
+  }
+  /* .container__mid-content {
+    margin-top: 46px;
+  } */
+  .content__filter-item {
+    position: unset;
+  }
+  .control-filter {
+    position: absolute;
+    top: var(--height-header-tablet);
+    left: 0;
+    right: 0;
+    min-width: unset;
+    max-width: unset;
+    border-radius: 0;
+    border: unset;
+    box-shadow: 0px 2px 7px var(--gray-color);
+  }
+  .content__filter {
+    margin-top: 45px;
+    position: fixed;
+    position: relative;
+    /* top: var(calc(--height-header-tablet+138px)); */
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+  }
+  /* .container__mid-content {
+    min-height: 500px;
+  } */
+  /* .control-filter {
+    position: absolute;
+    top: var(--height-header-tablet);
+    left: 0;
+    right: 0;
+    min-width: unset;
+    max-width: unset;
+  } */
+  .modal__body {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .order-form {
+    padding: unset;
+  }
+  .order-form__close {
+    top: 0;
+    right: -10px;
+  }
+  .form-info__customer {
+    width: 100%;
+  }
+  .order-form__heading {
+    font-size: 2rem;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .modal__inner {
+    max-height: 100vh;
+  }
+  .label {
+    width: 70px;
+    /* margin-left: 5px; */
+  }
+  .form-info__customer {
+    padding: 5px;
+  }
+  .btn.btn-lage {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  .oder-form__info {
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  .label-input {
+    display: none;
+  }
+  .form-info__group {
+    margin: 0 0 5px 0;
+  }
+  .form-info__btn {
+    margin: 20px 0 15px 0;
+  }
+  .pagination__num {
+    display: none;
+  }
+  .content__filter-list {
+    position: relative;
+  }
+  .modal__body {
+    animation: growh-mobile linear .2s;
+  }
+  .item-1.item-1--color {
+    font-size: 1rem;
+  }
+  .infor_user {
+    padding: 0 10px;
+  }
+  @keyframes growh-mobile {
+    from {
+        transform: scale(var(--growh-from)) translateY(-100%);      
+    }
+    to {
+        transform: scale(var(--growh-to)) translateY(-50%);       
+
+    }
+}
+}
+/*   740px < tablet < 1024px*/
+@media screen and (min-width: 46.25em) and (max-width:63.9375em ) {
+  .hiden-on-tablet {
+    display: none;
+  }
+  
+  .container__mid-heading {
+    /* position: fixed;
+    top: var(--height-header-tablet); */
+    width: 644px;
+    /* z-index: 10; */
+  }
+  .wrap_filter.sticky {
+    width: 644px;
+  }
+  .navigation__menu-mobile {
+    width: 644px;
+  }
+  .pagination__num {
+    display: none;
+  }
+  
+}
+/* pc >= 1024px*/
+@media screen and (min-width: 64em) {
+  .hiden-on-pc {
+    display: none;
+  }
+  .content__filter-item:hover > .control-filter {
+    transform: scaleY(1);
+  }
+  .control-filter__close {
+    display: none;
+  }
+}
+
+/* pc lagre */
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .numberphone {
+    margin-left: 20px;
+  }
+  .navbar__menu.sticky {
+    max-width: 984px;
+  }
+  .phone-zalo {
+    font-size: 1.4rem;
+  }
+  
+}
+/* phone < 320px (iphone 5)*/
+@media (max-width: 20rem) {
+  .navigation__brand > img {
+    height: 70%;
+  }
+  .content__item {
+    font-size: 1rem;
+  }
+  .item-2.item-2--color {
+    font-size: 1.4rem;
+  }
+  /* .item-4.item-4--color, .item-3.item-3--color {
+    font-size: 1rem;
+  } */
+  .search__list {
+    margin: 5px 0;
+  }
+  .search__item {
+    font-size: 1rem;
+    padding: 2px;
+  }
+  .navigation__home > i {
+    font-size: 2.5rem;
+  }
+  .line {
+    width: 80%;
+  }
+  .btn.btn-medium {
+    /* width: 50%; */
+    font-size: 1rem;
+  }
+  
+  .btn.btn-search.search-button {
+    width: 40px;
+  }
+  .modal__inner-body-item-detail, .modal__inner-header-item {
+    font-size: 1rem;
+  }
+  .pagination__item {
+    margin-right: 4px;
+  }
+  
+  
+}

@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h1>Upload file so</h1>
+<form action="." method="post" enctype="multipart/form-data" >
+  <select name="user" id="user">
+    {% for item in user%}
+    <option value="{{item.id}}">{{item.name}}</option>
+    {% endfor %}
+  </select><br><br>
+  <div>
+    <label for="discount">Discount: </label>
+    <input type="text" id="discount" name="discount" value=0><br><br>
+    <input type="checkbox" id="priority" name="priority" value="True">
+    <label for="priority">Priority</label><br><br>
+  </div><br><br>
+  
+  {{ form.as_p }}
+  {% csrf_token %}
+  <button type="submit">Upload file</button>
+</form>
+{% endblock %}
